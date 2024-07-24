@@ -1,21 +1,8 @@
-import { defineConfig } from 'vite';
-import tailwindcss from 'tailwindcss';
 
-// https://vitejs.dev/config/
+import { defineConfig } from 'vite'
+
 export default defineConfig({
-  plugins: [
-    // Add Tailwind CSS plugin
-    {
-      name: 'tailwindcss',
-      config() {
-        return {
-          css: {
-            postcss: {
-              plugins: [tailwindcss()],
-            },
-          },
-        };
-      },
-    },
-  ],
-});
+  build: {
+    outDir: 'dist',
+  },
+})
